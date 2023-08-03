@@ -35,9 +35,9 @@ window.addEventListener("load", function () {
     job_dropdown = dropdowns[1]
     business_dropdown = dropdowns[2]
 
-    courses_dropdown.style.top = `${bottom_dist}px`
-    job_dropdown.style.top = `${bottom_dist}px`
-    business_dropdown.style.top = `${bottom_dist}px`
+    // courses_dropdown.style.top = `${bottom_dist}px`
+    // job_dropdown.style.top = `${bottom_dist}px`
+    // business_dropdown.style.top = `${bottom_dist}px`
 
     course_grid = document.querySelector("nav .container .course_grid");
     job_grid = document.querySelector("nav .nav-upper-right li.job");
@@ -47,9 +47,9 @@ window.addEventListener("load", function () {
     job_grid_left = job_grid.getBoundingClientRect().left;
     business_grid_left = business_grid.getBoundingClientRect().left;
 
-    courses_dropdown.style.left = `${courses_grid_left - 30}px`
-    job_dropdown.style.left = `${job_grid_left - 30}px`
-    business_dropdown.style.left = `${business_grid_left - 10}px`
+    // courses_dropdown.style.left = `${courses_grid_left - 30}px`
+    // job_dropdown.style.left = `${job_grid_left - 30}px`
+    // business_dropdown.style.left = `${business_grid_left - 10}px`
 
     function toggle_dropdown(clickIt, dropdown) {
         clickIt.addEventListener("click", () => {
@@ -77,6 +77,36 @@ window.addEventListener("load", function () {
     close_dropdown(courses_dropdown)
     close_dropdown(job_dropdown)
     close_dropdown(business_dropdown)
+
+    //hamburger
+    let hamburger = document.querySelector("nav .nav-upper-right .hamburger")
+    let ham_expand = document.querySelector("nav .nav-upper-right .ham-expand")
+
+    toggle_dropdown(hamburger, ham_expand)
+
+    // hamburger dropdowns
+
+    let ham_course = document.querySelector(".ham-expand .courses>p")
+    let ham_job = document.querySelector(".ham-expand .job>p")
+    let ham_business = document.querySelector(".ham-expand .business>p")
+
+    let ham_course_expand = document.querySelector(".ham-expand .courses-expand")
+    let ham_job_expand = document.querySelector(".ham-expand .job-expand")
+    let ham_business_expand = document.querySelector(".ham-expand .business-expand")
+
+    toggle_dropdown(ham_course, ham_course_expand)
+    toggle_dropdown(ham_job, ham_job_expand)
+    toggle_dropdown(ham_business, ham_business_expand)
+
+
+    // closing hamburger dropdown when screen width increases 
+    window.addEventListener('resize', () => {
+        const windowWidth = window.innerWidth;
+        if (windowWidth > 510) {
+            console.log("resized");
+            document.querySelector(".ham-expand").style.display = "none";
+        }
+    });
 
 
     // expanding module content 
