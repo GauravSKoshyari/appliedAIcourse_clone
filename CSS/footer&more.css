@@ -76,5 +76,7 @@ footer .footer-slide a {
 @media (max-width:700px) {
     footer .container {
         display: block;
+        /* padding-left: 3rem; */
+        width: 90%;
     }
 }

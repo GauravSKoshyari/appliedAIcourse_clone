@@ -128,18 +128,17 @@ main aside {
 
 main aside {
     height: 428px;
+    padding: 1rem;
 }
 
 #yt-video {
-    margin-left: 13px;
-    margin-top: 10px;
-    height: 200px;
-    width: 310px;
+    /* height: 200px; */
+    width: 100%;
+    aspect-ratio: 16/9;
+    display: block;
 }
 
 main aside .aside-content {
-    width: 90%;
-    margin: auto;
     margin-top: 10px;
 }
 
@@ -262,5 +261,34 @@ main .container .content .expand-content {
 @media screen and (max-width:800px) {
     main .container {
         flex-direction: column-reverse;
+    }
+
+    main aside {
+        margin-bottom: 3rem;
+    }
+
+    main .container {
+        width: 100%;
+    }
+
+    main .container aside {
+        margin-left: 0;
+
+    }
+
+    section.comments {
+        width: 95%;
+        margin-left: 4px;
+    }
+
+    .headings {
+        width: 94%;
+    }
+}
+
+@media screen and (max-width : 684px) {
+    section.comments .btn {
+        margin-top: 10px;
+        margin-bottom: 12px;
     }
 }

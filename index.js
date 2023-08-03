@@ -28,28 +28,22 @@ window.addEventListener("load", function () {
     // setting dropdowns 
 
     nav_upper = document.querySelector("nav .nav-upper .container");
-    bottom_dist = nav_upper.getBoundingClientRect().bottom;
+    // bottom_dist = nav_upper.getBoundingClientRect().bottom;
 
     dropdowns = document.querySelectorAll("nav .dropdown")
     courses_dropdown = dropdowns[0]
     job_dropdown = dropdowns[1]
     business_dropdown = dropdowns[2]
 
-    // courses_dropdown.style.top = `${bottom_dist}px`
-    // job_dropdown.style.top = `${bottom_dist}px`
-    // business_dropdown.style.top = `${bottom_dist}px`
 
     course_grid = document.querySelector("nav .container .course_grid");
     job_grid = document.querySelector("nav .nav-upper-right li.job");
     business_grid = document.querySelector("nav .nav-upper-right li.business");
 
-    courses_grid_left = course_grid.getBoundingClientRect().left;
-    job_grid_left = job_grid.getBoundingClientRect().left;
-    business_grid_left = business_grid.getBoundingClientRect().left;
+    // 
+    business_dropdown.style.left = `${business_grid.getBoundingClientRect().left}px`
 
-    // courses_dropdown.style.left = `${courses_grid_left - 30}px`
-    // job_dropdown.style.left = `${job_grid_left - 30}px`
-    // business_dropdown.style.left = `${business_grid_left - 10}px`
+
 
     function toggle_dropdown(clickIt, dropdown) {
         clickIt.addEventListener("click", () => {
@@ -59,7 +53,6 @@ window.addEventListener("load", function () {
             }
             else {
                 dropdown.style.display = 'block';
-                // console.log("clicked dropdown");
 
             }
         })
@@ -106,6 +99,8 @@ window.addEventListener("load", function () {
             console.log("resized");
             document.querySelector(".ham-expand").style.display = "none";
         }
+
+        business_dropdown.style.left = `${business_grid.getBoundingClientRect().left}px`
     });
 
 
