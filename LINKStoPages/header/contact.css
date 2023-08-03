@@ -1,0 +1,187 @@
+.contact-heading {
+    height: 400px;
+    background-image: url('https://www.appliedaicourse.com/images/contact-us.jpg');
+    text-align: center;
+    color: white;
+    padding-top: 127px;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+}
+
+.contact-heading h1 {
+    font-size: 47px;
+    font-weight: 600;
+
+}
+
+.contact-heading h2 {
+    font-size: 38px;
+    font-weight: 400;
+}
+
+.contact-heading hr {
+    width: 50px;
+    height: 4px;
+    border-radius: 4px;
+    background: white;
+    margin: 14px auto;
+}
+
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    margin-top: 34px;
+}
+
+.main-content .form {
+    /* background-color: royalblue; */
+    margin-right: 30px;
+}
+
+
+.main-content .form h3 {
+    font-size: 32px;
+    font-weight: 1000;
+}
+
+.main-content .form p {
+    color: #6c757d;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.main-content form input,
+.main-content form textarea {
+    border: 1px solid rgb(206, 212, 218);
+    border-radius: 4px;
+    height: 27px;
+    padding: 4px 10px;
+}
+
+.main-content form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    height: 70px;
+}
+
+.main-content form #name,
+.main-content form #email {
+    width: 40%;
+}
+
+.main-content form #email {
+    float: right;
+}
+
+.main-content form #subject {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    height: 35px;
+}
+
+.main-content form input::placeholder,
+.main-content form textarea::placeholder {
+    font-size: 16px;
+}
+
+
+
+.main-content form input:focus {
+    outline: 1px solid lightblue;
+}
+
+.main-content form textarea:focus {
+    outline: 3px solid lightblue;
+
+}
+
+/* captcha */
+
+#captcha-box #box {
+    height: 25px;
+    width: 25px;
+    border: 2px solid hsl(210, 63%, 70%);
+    border-radius: 3px;
+    background-color: #fff;
+}
+
+#captcha-box p {
+    margin: auto 14px;
+    margin-right: 64px;
+}
+
+#captcha-box {
+    display: flex;
+    border: 1px solid rgb(206, 212, 218);
+    width: 40%;
+    height: 75px;
+    margin-top: 25px;
+    justify-content: center;
+    align-items: center;
+    background: hsl(210, 14%, 97%);
+    margin-bottom: 25px;
+
+}
+
+
+
+#captcha-box .captcha-details {
+    text-align: center;
+}
+
+#captcha-box .captcha-details .reCAPTCHA {
+    font-size: 11px;
+}
+
+#captcha-box .captcha-details div:last-child {
+    font-size: 8px;
+}
+
+#captcha-box .captcha-details div:last-child span:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+form button {
+    width: 25%;
+    height: 48px;
+    background: #10C3F8;
+    border: none;
+    color: white;
+    border-radius: 3px;
+    padding-top: 5px;
+}
+
+
+
+
+/* contact details  */
+.contact-details {
+    padding-left: 20px;
+    padding-top: 30px;
+    margin-left: 25px;
+}
+
+.contact-details div .icon {
+    margin-left: -19px;
+    margin-bottom: 10px;
+    margin-top: 25px;
+    font-weight: 600;
+}
+
+.contact-details .Address pre {
+    margin-left: -61px;
+}
+
+.contact-details .info {
+    font-size: 14px;
+    color: #7C848A;
+}
+
+.contact-details .icon .fa-solid {
+    margin-left: -12px;
+    margin-right: 8px;
+}

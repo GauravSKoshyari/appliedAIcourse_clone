@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+
+
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+li {
+    list-style-type: none;
+}
+
+
+
+header {
+    background-color: black;
+    font-family: helvetica, 'Source Sans Pro', sans-serifinheritinherit;
+    font-weight: 700;
+}
+
+.container {
+    width: 82vw;
+    margin: auto;
+}
+
+header .container {
+    display: flex;
+    flex-direction: row;
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    color: white;
+}
+
+header .container .left {
+    flex: 2;
+}
+
+header .container .right {
+    flex: 1;
+}
+
+
+
+header .container .left ul {
+    display: flex;
+    flex-direction: row;
+}
+
+header .container .right ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+header .left li {
+    margin-right: 10px;
+    font-size: 12px;
+}
+
+
+header .left li .h-icon {
+    font-size: 14px;
+    margin-right: 2px;
+
+}
+
+
+header li.ques {
+    margin-right: 12px;
+}
+
+
+
+header .right li:nth-child(2) {
+    margin-left: 30px;
+}
+
+header .right li {
+    font-size: 12px;
+}
+
+
+
+
+
+header a:hover {
+    color: orange;
+}
+
+
+
+/* responsiveness */
+@media (max-width: 970px) {
+    .container .left ul li:last-child {
+        display: none;
+    }
+}
+
+@media (max-width: 655px) {
+    .container .left ul li:nth-of-type(3) {
+        display: none;
+    }
+}
+
+@media (max-width: 450px) {
+    header .container .left ul {
+        display: none;
+    }
+}

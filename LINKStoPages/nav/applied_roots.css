@@ -1,0 +1,424 @@
+:root {
+    scroll-behavior: smooth;
+}
+
+
+.applied-slide {
+    background: url("https://d2n989decvba0v.cloudfront.net/images/header_img.jpg") center top;
+    height: 400px;
+    color: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.applied-slide .left {
+    margin-right: 84px;
+
+}
+
+.applied-slide .left h1 {
+    font-weight: 700;
+    font-size: 40px;
+    margin-bottom: 50px;
+
+}
+
+.applied-slide .left h2 {
+    font-weight: 400;
+    font-size: 28px;
+}
+
+.applied-slide .left button {
+    margin-top: 15px;
+    margin-bottom: 30px;
+    width: 200px;
+    padding: 10px;
+    color: white;
+    border: none;
+    background-color: #fcb514;
+    border-radius: 4px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.applied-slide .left button:hover {
+    background-color: #e0a800;
+}
+
+.applied-slide .right img {
+    margin: auto;
+    display: block;
+    cursor: pointer;
+}
+
+/* hiring  */
+.hiring {
+    width: 80%;
+    margin: auto;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+hr {
+    background: #10C3F8;
+    height: 4px;
+    width: 106px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 25px;
+    margin-bottom: 35px;
+
+}
+
+.hiring h1,
+#about-course h1,
+.case-studies h1,
+.success-stories h1,
+.employers h1,
+.our-team h1,
+.student-blogs h1 {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.hiring .companies .logo {
+    float: left;
+    width: 90px;
+    height: 40px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+
+/* about course  */
+#about-course {
+    /* width: 80%; */
+    /* margin: auto; */
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#about-course .details {
+    display: flex;
+}
+
+#about-course .details .left {
+    margin-right: 55px;
+}
+
+#about-course .details .right {
+    width: 40vw;
+}
+
+#about-course .details .right .course-features {
+    margin-bottom: 10px;
+}
+
+#about-course .details .right .course-features div {
+    height: 0px;
+    transition: height 0.4s;
+    overflow: hidden;
+
+    /* 2nd way  */
+    /* max-height: 0px; */
+    /* overflow: hidden; */
+    /* transition: max-height 0.4s; */
+
+}
+
+.notransition {
+    transition: none !important;
+}
+
+
+#about-course .details .right .course-features .feature-detail {
+    padding: 20px 10px;
+    color: #22323d;
+    box-sizing: border-box;
+}
+
+
+
+#about-course .details .right .feature-name {
+    border: 1px solid #E9EEF2;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 15px;
+    color: #444444;
+
+}
+
+#about-course .details .right .feature-name:hover {
+    color: #fcb514;
+    cursor: pointer;
+}
+
+/* on clicking  of feature name , u need to add below 2 classes  */
+.course-features-toggle {
+    border: 1px solid #E9EEF2;
+    padding: 10px 20px;
+    padding-bottom: 0px;
+    border-radius: 10px;
+}
+
+#about-course .details .right .feature-name-toggle {
+    border: none;
+    padding: 0px;
+    border-bottom: 2px solid #E9EEF2;
+    border-radius: 0px;
+    padding-bottom: 10px;
+}
+
+
+/* case studies  */
+.case-studies,
+.success-stories {
+    background-color: #f4f4f4;
+    padding: 52px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.case-studies {
+    margin-top: 50px;
+}
+
+.case-studies>div {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(300px, 1fr));
+    /* grid-template-rows: repeat(2, 100px); */
+    gap: 10px;
+    place-items: center;
+}
+
+.case-studies .case-studies-logo {
+    padding: 15px;
+}
+
+/* success stories  */
+.success-stories {
+    color: #6c7b84;
+}
+
+.success-stories>p {
+    font-size: 20px;
+    text-align: center;
+}
+
+.success-stories .success-peoples {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px, 270px));
+    column-gap: 25px;
+    margin-top: 50px;
+}
+
+.success-stories .success-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 3px 4px 10px 4px hsl(240deg 40% 90%);
+    border-radius: 10px;
+    padding: 28px 15px;
+}
+
+.success-stories .success-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+.success-stories .success-card p:nth-of-type(1) {
+    margin: 20px 0;
+    text-align: center;
+    color: #838383;
+}
+
+.success-stories .success-card p:nth-of-type(2) {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.success-stories .success-card p:last-child {
+    text-align: center;
+
+}
+
+
+/* employers  */
+
+.employers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #6c7b84;
+    padding: 70px;
+}
+
+
+.employers>div {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(250px, 330px));
+    margin-top: 40px;
+    gap: 60px;
+}
+
+.employers .employer-detail .employer-img img {
+    height: 80px;
+    border-radius: 50%;
+}
+
+.employers .employer-detail p:nth-of-type(1) {
+    font-size: 20px;
+    color: #000;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.employers .employer-detail p:nth-of-type(2) {
+    font-weight: 300;
+    margin-bottom: 14px;
+}
+
+.employers .employer-detail p:nth-of-type(3) {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+
+/* our team  */
+.our-team,
+.advisors,
+.student-blogs {
+    color: #6c7b84;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 70px;
+    padding-bottom: 30px;
+}
+
+.our-team {
+    background: linear-gradient(to right, rgba(94, 84, 243, 1) 0%, rgba(101, 216, 239, 1) 100%);
+}
+
+.our-team h1 {
+    color: #fff;
+}
+
+.our-team>div,
+.advisors>div,
+.student-blogs>div {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.our-team>div .card,
+.advisors>div .card,
+.student-blogs>div .card {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin: 0 24px;
+    padding: 15px;
+}
+
+.our-team .card .team-member-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+.our-team>div .card p:nth-of-type(1) {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+
+/* our advisors */
+.advisors .card .advisor-member-img {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+}
+
+.advisors div,
+.student-blogs div {
+    width: 100%;
+}
+
+.advisors>div div.card {
+    box-sizing: border-box;
+    /* so that below 19% covers padding , but will not include margin  */
+
+    flex: 0 0 19%;
+    box-shadow: 0px 0px 9px 2px hsl(240deg 14% 90%);
+    padding: 40px 20px
+}
+
+.advisors>div .card p:nth-of-type(1) {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.advisors>div .card p:last-child {
+    text-align: center;
+}
+
+
+/* student blogs  */
+
+
+.student-blogs>div div.card {
+    box-shadow: 0px 0px 9px 2px hsl(240deg 14% 90%);
+    padding: 40px 23px;
+    flex: 0 0 27%;
+    box-sizing: border-box;
+}
+
+.student-blogs>div div.card img {
+    box-shadow: 0px 0px 9px 2px hsl(240deg 14% 90%);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    margin-top: -68px;
+    width: 100%;
+}
+
+.student-blogs button {
+    margin-top: 22px;
+    border: none;
+    background: #10C3F8;
+    border-radius: 6px;
+    padding: 15px 12px;
+    color: #fff;
+    font-size: 16px;
+    margin-left: auto;
+    margin-right: 68px;
+}
+
+footer {
+    margin-top: 0px;
+}

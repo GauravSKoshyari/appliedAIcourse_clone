@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="../../CSS/header.css">
+    <link rel="stylesheet" href="../../CSS/nav.css">
+    <link rel="stylesheet" href="../../CSS/footer&more.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="contact_script.js"></script>
+
+</head>
+
+<body>
+    <header id="header">
+    </header>
+
+    <nav id="nav"></nav>
+
+    <nav id="nav-lower">
+        <div class="nav-lower">
+            <div class="container">
+                <div class="nav-lower-left">
+                    <ul>
+                        <li>Home <span class="greter-than"> > </span></li>
+                        <li>Register</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+    </nav>
+
+    <div id="register">
+        <form action="" class="register-form">
+            <h1>Register</h1>
+            <input type="text" placeholder="Full Name">
+            <input type="email" placeholder="Email*" id="">
+            <input type="text" placeholder="Mobile*" id="">
+            <input type="password" placeholder="Password">
+            <input type="password" placeholder="Re-Enter Password">
+
+            <div id="captcha-box">
+                <div id="box"></div>
+                <p>I'm not a robot</p>
+                <div class="captcha-details">
+                    <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" height="32px">
+                    <div class="reCAPTCHA">reCAPTCHA</div>
+                    <div><span>Privacy </span>-<span> Terms</span></div>
+                </div>
+            </div>
+
+            <input type="checkbox" name="" id="checkbox">
+            <p id="terms">I Agree <a href="">Terms & Conditions</a></p>
+            <button>SUBMIT</button>
+            <p id="login">Already member ? <a href="./login.html">Login</a></p>
+
+        </form>
+    </div>
+
+    <footer id="footer">
+    </footer>
+
+
+</body>
+<script>
+    $(function () {
+        $("#footer").load("../../repeat_content/footer.html");
+        $("#header").load("../../repeat_content/header.html");
+        $("#nav").load("../../repeat_content/nav.html");
+    });
+</script>
+
+</html>
