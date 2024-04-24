@@ -18,6 +18,8 @@ main .container section .content .free-videos-content hr {
 
 .free-videos-content div:first-child {
     padding: 0;
+    cursor: pointer;
+
 }
 
 .free-videos-content div:first-child div:first-child {
@@ -49,9 +51,7 @@ main .container section .content .free-videos-content hr {
     margin-right: 10px;
 }
 
-.free-videos-content div:first-child {
-    cursor: pointer;
-}
+
 
 
 

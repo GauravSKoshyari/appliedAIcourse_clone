@@ -73,7 +73,7 @@ main .login {
 }
 
 #login-form #captcha-box {
-    width: 60%;
+    width: 300px;
 }
 
 
@@ -105,4 +105,21 @@ main .login {
 #login-links>div:hover {
     background-color: #6c757d;
     border-color: #6c757d;
+}
+
+
+@media screen and (max-width:870px) {
+    main .login {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #login-form {
+        width: 80%;
+    }
+
+    #login-links {
+        width: 80%;
+    }
 }

@@ -11,6 +11,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 30px 15px;
 }
 
 
@@ -55,18 +56,51 @@
     cursor: pointer;
 }
 
+@media screen and (max-width:900px) {
+    .applied-slide {
+        flex-direction: column;
+        height: fit-content;
+        gap: 30px;
+    }
+
+}
+
+@media screen and (max-width:550px) {
+    .applied-slide .left button {
+        width: 100%;
+    }
+
+    .applied-slide .left h2 {
+        font-size: 22px;
+    }
+
+    .applied-slide .left h1 {
+        font-size: 35px;
+
+    }
+
+    .applied-slide .left {
+        margin-right: 0;
+
+    }
+
+}
+
+
+
 /* hiring  */
 .hiring {
-    width: 80%;
-    margin: auto;
-    height: 400px;
+    margin: 90px auto;
+    width: 88%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+
 }
 
-hr {
+main hr {
     background: #10C3F8;
     height: 4px;
     width: 106px;
@@ -97,42 +131,48 @@ hr {
 }
 
 
+
 /* about course  */
 #about-course {
-    /* width: 80%; */
-    /* margin: auto; */
     min-height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 20px;
+    text-align: center;
 }
 
 #about-course .details {
     display: flex;
+    gap: 48px;
 }
 
+
+
 #about-course .details .left {
-    margin-right: 55px;
+    width: 42vw;
+}
+
+#about-course .details .left img {
+    width: 100%;
 }
 
 #about-course .details .right {
-    width: 40vw;
+    width: 42vw;
 }
+
+
 
 #about-course .details .right .course-features {
     margin-bottom: 10px;
 }
 
 #about-course .details .right .course-features div {
-    height: 0px;
-    transition: height 0.4s;
-    overflow: hidden;
 
-    /* 2nd way  */
-    /* max-height: 0px; */
-    /* overflow: hidden; */
-    /* transition: max-height 0.4s; */
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.4s;
 
 }
 
@@ -145,6 +185,7 @@ hr {
     padding: 20px 10px;
     color: #22323d;
     box-sizing: border-box;
+    text-align: left;
 }
 
 
@@ -155,7 +196,7 @@ hr {
     border-radius: 10px;
     font-size: 15px;
     color: #444444;
-
+    text-align: left;
 }
 
 #about-course .details .right .feature-name:hover {
@@ -180,6 +221,30 @@ hr {
 }
 
 
+@media screen and (max-width:1200px) {
+    #about-course .details .left {
+        width: 44vw;
+    }
+
+    #about-course .details .right {
+        width: 44vw;
+    }
+}
+
+@media screen and (max-width:800px) {
+    #about-course .details {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+
+    #about-course .details .right,
+    #about-course .details .left {
+        width: 90vw;
+        box-sizing: border-box;
+    }
+}
+
 /* case studies  */
 .case-studies,
 .success-stories {
@@ -189,6 +254,7 @@ hr {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .case-studies {
@@ -197,15 +263,39 @@ hr {
 
 .case-studies>div {
     display: grid;
-    grid-template-columns: repeat(4, minmax(300px, 1fr));
-    /* grid-template-rows: repeat(2, 100px); */
-    gap: 10px;
-    place-items: center;
+    grid-template-columns: repeat(4, minmax(250px, 1fr));
+    row-gap: 50px;
+    column-gap: 10px;
+    justify-content: center;
+    justify-items: center;
+
 }
 
-.case-studies .case-studies-logo {
-    padding: 15px;
+
+
+
+@media screen and (max-width:1000px) {
+    .case-studies>div {
+        grid-template-columns: repeat(4, minmax(200px, 1fr));
+    }
 }
+
+@media screen and (max-width:880px) {
+    .case-studies>div {
+        grid-template-columns: repeat(4, minmax(150px, 1fr));
+    }
+}
+
+@media screen and (max-width:740px) {
+    .case-studies>div {
+        grid-template-columns: repeat(2, minmax(auto, 1fr));
+        column-gap: 30px;
+
+    }
+}
+
+
+
 
 /* success stories  */
 .success-stories {
@@ -258,6 +348,25 @@ hr {
 
 }
 
+@media screen and (max-width:990px) {
+    .success-stories .success-peoples {
+        grid-template-columns: repeat(2, minmax(auto, 1fr));
+        gap: 50px;
+    }
+
+    .success-stories .success-card {
+        padding: 40px 15px;
+    }
+}
+
+@media screen and (max-width:540px) {
+    .success-stories .success-peoples {
+        grid-template-columns: repeat(1, minmax(auto, 1fr));
+    }
+
+
+}
+
 
 /* employers  */
 
@@ -301,6 +410,23 @@ hr {
     line-height: 1.5;
 }
 
+@media screen and (max-width:950px) {
+
+    .employers>div {
+        grid-template-columns: repeat(3, minmax(150px, 330px));
+        gap: 40px;
+    }
+
+}
+
+@media screen and (max-width:740px) {
+
+    .employers>div {
+        grid-template-columns: repeat(1, minmax(auto, 1fr));
+        gap: 70px;
+    }
+
+}
 
 /* our team  */
 .our-team,
@@ -330,6 +456,8 @@ hr {
     display: flex;
     justify-content: center;
     margin-top: 25px;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
 .our-team>div .card,
@@ -341,7 +469,6 @@ hr {
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-    margin: 0 24px;
     padding: 15px;
 }
 
@@ -375,7 +502,8 @@ hr {
 
     flex: 0 0 19%;
     box-shadow: 0px 0px 9px 2px hsl(240deg 14% 90%);
-    padding: 40px 20px
+    padding: 40px 20px;
+    text-align: center;
 }
 
 .advisors>div .card p:nth-of-type(1) {
@@ -389,7 +517,49 @@ hr {
 }
 
 
+@media screen and (max-width:1280px) {
+
+    .advisors,
+    .student-blogs {
+        padding: 50px;
+    }
+}
+
+@media screen and (max-width:1180px) {
+
+    .advisors,
+    .student-blogs {
+        padding: 28px;
+    }
+}
+
+@media screen and (max-width:900px) {
+
+    .advisors,
+    .student-blogs {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .advisors>div div.card {
+        flex: 0 0 40%;
+    }
+
+}
+
+@media screen and (max-width: 540px) {
+    .advisors>div div.card {
+        flex: 0 0 100%;
+    }
+
+}
+
 /* student blogs  */
+
+.student-blogs {
+    text-align: center;
+}
 
 
 .student-blogs>div div.card {
@@ -418,6 +588,20 @@ hr {
     margin-left: auto;
     margin-right: 68px;
 }
+
+@media screen and (max-width: 830px) {
+
+    .student-blogs>div div.card {
+        flex: 0 0 100%;
+    }
+
+    .student-blogs>div {
+        row-gap: 50px;
+    }
+
+}
+
+
 
 footer {
     margin-top: 0px;

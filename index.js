@@ -1,6 +1,7 @@
 // document.addEventListener("DOMContentLoaded", function () {
 window.addEventListener("load", function () {
 
+    window.scrollTo(0, 0);
 
 
     heading_elements = document.querySelectorAll('.container .module-head .m-headings div');
@@ -27,8 +28,6 @@ window.addEventListener("load", function () {
 
     // setting dropdowns 
 
-    nav_upper = document.querySelector("nav .nav-upper .container");
-    // bottom_dist = nav_upper.getBoundingClientRect().bottom;
 
     dropdowns = document.querySelectorAll("nav .dropdown")
     courses_dropdown = dropdowns[0]
@@ -40,10 +39,7 @@ window.addEventListener("load", function () {
     job_grid = document.querySelector("nav .nav-upper-right li.job");
     business_grid = document.querySelector("nav .nav-upper-right li.business");
 
-    // 
     business_dropdown.style.left = `${business_grid.getBoundingClientRect().left}px`
-
-
 
     function toggle_dropdown(clickIt, dropdown) {
         clickIt.addEventListener("click", () => {
@@ -75,7 +71,7 @@ window.addEventListener("load", function () {
     let hamburger = document.querySelector("nav .nav-upper-right .hamburger")
     let ham_expand = document.querySelector("nav .nav-upper-right .ham-expand")
 
-    toggle_dropdown(hamburger, ham_expand)
+    // toggle_dropdown(hamburger, ham_expand)
 
     // hamburger dropdowns
 
@@ -96,12 +92,25 @@ window.addEventListener("load", function () {
     window.addEventListener('resize', () => {
         const windowWidth = window.innerWidth;
         if (windowWidth > 510) {
-            console.log("resized");
-            document.querySelector(".ham-expand").style.display = "none";
+            ham_expand.style.display = "none";
+        } else {
+            ham_expand.style.display = "block"
         }
-
         business_dropdown.style.left = `${business_grid.getBoundingClientRect().left}px`
     });
+
+    hamburger.addEventListener("click", () => {
+
+        console.log(ham_expand.clientHeight);
+        if (!ham_expand.clientHeight) {
+            ham_expand.style.maxHeight = 800 + "px"
+        }
+        else {
+            ham_expand.style.maxHeight = 0
+
+
+        }
+    })
 
 
     // expanding module content 
@@ -112,8 +121,6 @@ window.addEventListener("load", function () {
 
     for (let i = 0; i < clickModuleToExpand.length; i++) {
         clickModuleToExpand[i].addEventListener("click", () => {
-            console.log(contentToExpand[i].clientHeight);
-            console.log(contentToExpand_parent[i].clientHeight);
 
 
             if (!contentToExpand_parent[i].clientHeight) {
@@ -132,12 +139,8 @@ window.addEventListener("load", function () {
     clickToExpandFreeVideos = document.querySelector('.free-videos-content div:first-child')
     expandedFreeVideos = document.querySelector('.free-videos-content .free-videos-expand')
 
-    console.log(expandedFreeVideos.clientHeight);
-    console.log(clickToExpandFreeVideos.clientHeight);
 
     clickToExpandFreeVideos.addEventListener("click", () => {
-        console.log(expandedFreeVideos.clientHeight);
-        console.log(clickToExpandFreeVideos.clientHeight);
 
         if (!expandedFreeVideos.clientHeight) {
             expandedFreeVideos.style.maxHeight = 1812 + "px"
@@ -148,6 +151,7 @@ window.addEventListener("load", function () {
 
         }
     })
+
 
 })
 

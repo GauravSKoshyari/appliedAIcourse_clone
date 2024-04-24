@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="./applied_roots_bg_img_positoned.css">
     <link rel="stylesheet" href="./applied_roots.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="../header/contact_script.js"></script>
     <script src="./applied_roots.js"></script>
 
 </head>
@@ -367,10 +366,23 @@
 </body>
 <script>
     $(function () {
-        $("#footer").load("../../repeat_content/footer.html");
-        $("#header").load("../../repeat_content/header.html");
-        $("#nav").load("../../repeat_content/nav.html");
+        // Load multiple files and trigger custom event when all are loaded
+        var filesToLoad = ["../../repeat_content/nav.html", "../../repeat_content/header.html", "../../repeat_content/footer.html"];
+        var filesLoaded = 0;
+
+        $.each(filesToLoad, function (index, file) {
+            // #nav , #header , #footer
+            $(`#${file.split("/").pop().split(".")[0]}`).load(file, function () {
+                filesLoaded++;
+                if (filesLoaded === filesToLoad.length) {
+                    $(document).trigger("allContentLoaded");
+                }
+            });
+        });
     });
+
+
 </script>
+<script src="../header/contact_script.js"></script>
 
 </html>
